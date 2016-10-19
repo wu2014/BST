@@ -176,7 +176,7 @@ class BST(object):
 
         return data
 
-def debug_remove():
+def main():
     tree = BST()
     tree.add(50)
     tree.add(30)
@@ -196,40 +196,10 @@ def debug_remove():
     res = tree.remove(data)
     print "Remove:", data, " -> ", res
     print "\nTree:\n" + str(tree)
-  
-def main():
-    tree = BST()
-    print "Adding D B A C F E G"
-    tree.add("D")
-    tree.add("B")
-    tree.add("A")
-    tree.add("C")
-    tree.add("F")
-    tree.add("E")
-    tree.add("G")
-    
-    print tree.find("A")
-    print tree.find("Z")
-
-    print "\nString:\n" + str(tree)
-
-    print "Iterator (inorder traversal): "
-    iterator = iter(tree)
-    while True:
-        try:
-            print iterator.next(),
-        except Exception, e:
-            print e
-            break
-    
-    # Use a for loop instead
-    print "\nfor loop (inorder traversal): "
-    for item in tree:
-        print item,
 
 if __name__ == "__main__":
-    # main()
-    debug_remove()
+    main()
+    
 
 
 
