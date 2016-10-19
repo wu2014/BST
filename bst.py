@@ -170,13 +170,11 @@ class BST(object):
             node.setRoot(successor.getRoot())
             # fix successor's parent's child
             if parent.getLeft() == successor:
-                pass
-                parent.removeLeft()
+                parent._left = parent.getLeft().getLeft()
             else:
-                pass
-                parent.removeRight()
+                parent._right = parent.getRight().getLeft()
 
-        return True 
+        return data
 
 def debug_remove():
     tree = BST()
